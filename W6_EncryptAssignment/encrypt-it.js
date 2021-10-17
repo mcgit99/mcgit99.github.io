@@ -23,9 +23,9 @@
   // entire program in the init function, for similar reasons that
   // you shouldn't write an entire Java program in the main method).
   function encryptOnClick() {
-    var encryptButton = document.getElementById('encrypt-it');
-    var userInput = document.getElementById('input-text');
-    var shifted;
+    let encryptButton = document.getElementById('encrypt-it');
+    let userInput = document.getElementById('input-text');
+    let shifted;
    
     encryptButton.addEventListener('click', () => {
       shifted = shiftCipher(userInput);
@@ -35,7 +35,7 @@
   }
 
   function shiftCipher(text) {
-    text = text.toString().toLowerCase();
+    text = text.value.toLowerCase();
     let result = "";
     for (let i = 0; i < text.length; i++) {
       if (text[i] < 'a' || text[i] > 'z') {
